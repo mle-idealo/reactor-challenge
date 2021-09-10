@@ -17,7 +17,7 @@ Feel free to make a pull request or reach out to us if you have any good solutio
 * avoid intermediate object creation as much as possible
 * no blocking code
 * avoid side effects (.doOnNext, .doOnEach etc.)
-* parallelism of tasks (getting name, age, hair) should be support (not yet implemented)
+* parallelism of tasks (getting name, age, hair) should be supported
 
 ### How?
 1. Implement ```PersonService.create```
