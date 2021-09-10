@@ -7,8 +7,8 @@ With this repository we want to collect good solutions for this use case.
 Feel free to make a pull request or reach out to us if you have any good solution.
 
 ### (Dummy) Domain description
-* 1 service for generating "persons"
-* 3 services provide properties each property (name, age, hair)
+* 1 service for generating persons
+* 3 services provide properties (name, age, hair) for persons
 * ```name``` is mandatory
 * ```age``` & ```hair``` are optional
 
