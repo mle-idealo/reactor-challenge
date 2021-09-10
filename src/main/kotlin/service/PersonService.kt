@@ -13,7 +13,9 @@ class PersonService(
         val age = ageService.get()
         val hair = hairService.get()
 
-        // TODO: Implement this method according to its unit tests: PersonServiceTest
-        return Mono.empty()
+        return name
+            .map { PersonDTO(it, null, null) }
+            .flatMap { person -> age.map { person.copy(age = it) }.defaultIfEmpty(person) }
+            .flatMap { person -> hair.map { person.copy(hair = it) }.defaultIfEmpty(person) }
     }
 }
