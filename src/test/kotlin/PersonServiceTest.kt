@@ -1,5 +1,8 @@
 import io.mockk.every
 import io.mockk.mockk
+import model.AgeDTO
+import model.HairDTO
+import model.NameDTO
 import model.PersonDTO
 import org.junit.jupiter.api.DynamicTest.dynamicTest
 import org.junit.jupiter.api.TestFactory
@@ -46,9 +49,9 @@ internal class PersonServiceTest {
 
         dynamicTest("name: ${input.first}, age: ${input.second}, hair: ${input.third} -> person: $expectedMsg") {
 
-            every { nameService.get() } returns input.first.toMono()
-            every { ageService.get() } returns input.second.toMono()
-            every { hairService.get() } returns input.third.toMono()
+            every { nameService.get() } returns input.first?.let { NameDTO(it) }.toMono()
+            every { ageService.get() } returns input.second?.let { AgeDTO(it) }.toMono()
+            every { hairService.get() } returns input.third?.let { HairDTO(it) }.toMono()
 
             personService.create()
                 .stepVerify()
