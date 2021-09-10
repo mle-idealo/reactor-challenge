@@ -24,3 +24,8 @@ With this repository we want to collect good solutions for this use case.
 2. Run ```./gradlew test```
 
 [1]: https://projectreactor.io/
+
+
+### Possible solution
+
+[a link to a branch](/chrgue-idealo/reactor-challenge/tree/possible-solution)
