@@ -26,7 +26,7 @@ Feel free to make a pull request or reach out to us if you have any good solutio
 
 ### Possible solution
 If you need inspiration for a solution you can have a look into [this branch][2]. 
-But beware the solution is that not much ideal. It created intermediate object and consumes the data sources sequentially.
+But beware the solution is that not much ideal. It created intermediate objects and consumes the data sources sequentially.
 
 
 [1]: https://projectreactor.io/
